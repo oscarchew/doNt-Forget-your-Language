@@ -1,7 +1,7 @@
 # doNt-Forget-your-Language
 The official repository of our EACL2024-Findings paper: Understanding and Mitigating Spurious Correlations in Text Classification with Neighborhood Analysis.
 * 🎯 Text classification models are prone to over reliance on spurious correlations that exist in the training set but may not hold true in general circumstances.
-* ✅ We demystify this underlying representation space and propose a simple yet effective mitigation method, NFL.
+* ✅ We demystify this underlying representation space and propose a simple yet effective mitigation method, do**N**'t **F**orget your **L**anguage (NFL).
 * 📝 https://aclanthology.org/2024.findings-eacl.68/
 * 🙌 This project is a collaborative effort between National Taiwan University (NTU), University of California, Los Angeles (UCLA) and University of Illinois Urbana-Champaign (UIUC).
 
