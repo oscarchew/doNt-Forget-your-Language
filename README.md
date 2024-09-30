@@ -1,9 +1,9 @@
 # doNt-Forget-your-Language
 The official repository of our EACL2024-Findings paper: Understanding and Mitigating Spurious Correlations in Text Classification with Neighborhood Analysis.
-* 🎯 Text classification models are prone to over reliance on spurious correlations that exist in the training set but may not hold true in general circumstances.
-* ✅ We demystify this underlying representation space and propose a simple yet effective mitigation method, do**N**'t **F**orget your **L**anguage (NFL).
-* 📝 https://aclanthology.org/2024.findings-eacl.68/
-* 🙌 This project is a collaborative effort between National Taiwan University (NTU), University of California, Los Angeles (UCLA) and University of Illinois Urbana-Champaign (UIUC).
+* 🎯 **Problem** Text classification models are prone to over reliance on spurious correlations that exist in the training set but may not hold true in general circumstances.
+* ✅ **Solution** We demystify this underlying representation space and propose a simple yet effective mitigation method, do**N**'t **F**orget your **L**anguage (NFL).
+* 📝 **Paper** https://aclanthology.org/2024.findings-eacl.68/
+* 🙌 **Collaboration** This project is a collaborative effort between National Taiwan University (NTU), University of California, Los Angeles (UCLA) and University of Illinois Urbana-Champaign (UIUC).
 
 Installation
 ---
@@ -16,13 +16,13 @@ pip install -r requirements.txt
 
 Usage
 ---
-**Data**: The processed datasets are available at `data`. If you wish to create those biased/unbiased/filtered subsets for your custom datasets, please refer to `src/create_subsets.py`
+**Data**: The processed datasets are available in the `data` directory. To create biased, unbiased, or filtered subsets for your custom datasets, refer to `src/create_subsets.py`.
 
-**Models**: To reproduce the numbers in the paper, simply run `src/nfl.py` for NFL or `src/dfr.py` for the DFR baseline that we re-implemented.
+**Models**: To reproduce the results in our paper, run `src/nfl.py` for NFL or `src/dfr.py` for the DFR baseline, which we re-implemented.
 
 Citation
 ---
-Please consider citing our paper if you find our work helpful. Thank you!
+If you find our work helpful, please consider citing our paper. Thank you!
 ```bibtex
 @inproceedings{chew-etal-2024-understanding,
     title = "Understanding and Mitigating Spurious Correlations in Text Classification with Neighborhood Analysis",
