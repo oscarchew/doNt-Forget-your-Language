@@ -35,6 +35,7 @@ def filter_datasets(dataset, split):
 
 def main():
     data_files = {split: f"./data/amazon_binary_{split}.csv" for split in ["train", "test"]}
+    # note that we assume the csv to have two fields: sentence (input text) and label (class id)
     datasets = load_dataset("csv", data_files=data_files)
     process_datasets(datasets)
     filter_datasets(datasets["test"], "test")
