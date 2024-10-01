@@ -2,9 +2,6 @@ import pandas as pd
 from datasets import load_dataset
 
 
-keywords = ["book", "Book", "movie", "Movie"]
-pattern = '|'.join(r"{}".format(x) for x in keywords)
-
 def make_biased_subset(df, keyword, label):
     to_drop = df[(df["sentence"].str.contains(keyword, case=False)) & (df["label"] != label)].sample(frac=1.0)
     return df.drop(to_drop.index)
@@ -28,6 +25,8 @@ def process_datasets(datasets):
 def filter_datasets(dataset, split):
     # collect examples that contain at least one spurious token
     print("filter")
+    keywords = ["book", "Book", "movie", "Movie"]
+    pattern = '|'.join(r"{}".format(x) for x in keywords)
     df = dataset if isinstance(dataset, pd.DataFrame) else pd.DataFrame(dataset)
     df = df[df["sentence"].str.contains(pattern, case=False)] 
     # df.drop(df[df.label == 1].index[-196:], inplace=True) # downsample if the filtered dataset is imbalance
