@@ -77,7 +77,7 @@ def main(args):
         load_best_model_at_end=True,
         metric_for_best_model="accuracy",
         greater_is_better=True,
-        save_total_limit=7,
+        save_total_limit=2,
         seed=args.seed,
 		report_to=None
     )
@@ -128,13 +128,12 @@ def main(args):
 def parse_arguments():
     parser = ArgumentParser()
     parser.add_argument("--train_file", type=str, default="./data/biased_amazon_train.csv")
-    parser.add_argument("--eval_file", type=str, default="./data/biased_amazon_test.csv")
     parser.add_argument("--output_dir", type=str, default="./biased_amazon_output")
     parser.add_argument("--model_name", type=str, default="roberta-base")
     parser.add_argument("--seed", type=int, default=24)
     parser.add_argument("--num_epochs", type=int, default=6)
     parser.add_argument("--reg_method", type=str, default="NFL-CP")
-    parser.add_argument("--reg_factor", type=float, default=1.0)
+    parser.add_argument("--reg_factor", type=float, default=15000.0)
     parser.add_argument("--freeze_lm", type=str, default="None")
     args = parser.parse_args()
     return args
