@@ -20,6 +20,11 @@ Usage
 
 **Models**: To reproduce the results in our paper, run `src/nfl.py` for NFL or `src/dfr.py` for the DFR baseline, which we re-implemented.
 
+Erratum
+---
+
+The Appendix B in the paper mistakenly shows $[BOS], w_1, ..., w_k, [EOS]$ as the input for neighborhood analysis. The actual implementation uses $w_1, ..., w_k$ as shown in this repository.
+
 Citation
 ---
 If you find our work helpful, please consider citing our paper. Thank you!
